@@ -6,17 +6,17 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css'; 
 import React from 'react'; 
 import Header from './components/Header/Header'; 
-import SideBar from './components/SideBar'; 
-import Main from './components/Main'; 
-import Footer from './components/Footer'; 
+// import SideBar from './components/SideBar'; 
+// import Main from './components/Main'; 
+// import Footer from './components/Footer'; 
 
 function App() {
   return (
     <>
       <Header />
-      <SideBar />
+      {/* <SideBar />
       <Main />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
