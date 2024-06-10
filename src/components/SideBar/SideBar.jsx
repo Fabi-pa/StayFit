@@ -1,8 +1,7 @@
 import React from 'react';
-import './sideBar.css';
-import navList from '../data/navItem';
+import './SideBarCSS/sideBar.css';
+import navList from './data/navItem';
 import NavItem from './NavItem';
-
 
 function SideBar() {
   return ( 
