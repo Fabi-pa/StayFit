@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import fetchData, { getTaskDetail, printDate } from "../fetchData"; 
-import "./CSS/dashboard.css"; 
+import "./DashboardCSS/dashboard.css"; 
 
 function ReportData() {
   const [usersWithFutureEntries, setUsersWithFutureEntries] = useState([]);

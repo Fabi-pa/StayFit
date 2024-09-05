@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import fetchData, { getTaskDetail, printDate } from "../fetchData";
-import "./CSS/recentActivity.css";
+import fetchData, { getTaskDetail, printDate } from "..";
+import "./DashboardCSS/recentActivity.css";
 import CardFilter from "./CardFilter";
 
 function RecentActivity() {
