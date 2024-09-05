@@ -7,8 +7,8 @@ import './App.css';
 import React from 'react'; 
 import Header from './components/Header/Header'; 
 import SideBar from './components/SideBar/SideBar'; 
-import Main from './components/Main'; 
-import Footer from './components/Footer'; 
+import Main from './components/Dashboard/Main'; 
+import Footer from './components/Footer/Footer'; 
 
 function App() {
   return (
