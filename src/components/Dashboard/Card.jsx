@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import "./CSS/card.css";
+import "./DashboardCSS/card.css";
 import CardFilter from "./CardFilter";
 
-// Definiere die Card-Komponente und destrukturiere das card-Prop
 function Card({ card }) {
   const [filter, setFilter] = useState("Today");
   const handleFilterChange = (filter) => {
     setFilter(filter);
   };
 
-  const amount = card.amount ?? 0; // Setze den amount-Wert auf 0, wenn er nicht definiert ist
+  const amount = card.amount ?? 0;
 
   return (
     <div className="col-xxl-4 col-md-6">
@@ -34,5 +33,4 @@ function Card({ card }) {
   );
 }
 
-// Exportiere die Card-Komponente für die Verwendung in anderen Dateien
 export default Card;

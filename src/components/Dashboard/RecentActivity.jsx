@@ -8,19 +8,14 @@ function RecentActivity() {
   const handleFilterChange = (filter) => {
     setFilter(filter);
   };
-  // Definiere einen State-Hook für Benutzer mit zukünftigen Einträgen
   const [usersWithFutureExits, setUsersWithFutureExits] = useState([]);
 
-  // Effekt-Hook zum Abrufen von Daten beim Mounten der Komponente
   useEffect(() => {
-    // Asynchrone Funktion zum Abrufen von Benutzereinträgen
     const fetchUserExits = async () => {
       try {
-        const data = await fetchData(); // Daten von fetchData abrufen
+        const data = await fetchData(); 
 
-        // Überprüfen, ob data.resultList definiert ist
         if (data && data.resultList) {
-          // Filtere Benutzer mit zukünftigen Einträgen
           const futureExits = data.resultList.filter((item) => {
             if (
               item.name &&
@@ -28,10 +23,9 @@ function RecentActivity() {
               item.attribute.aieProcessSchedule
             ) {
               return item.attribute.aieProcessSchedule.some((schedule) => {
-                const proc = getTaskDetail(schedule, "proc"); // Prozess aus dem Zeitplan extrahieren
+                const proc = getTaskDetail(schedule, "proc"); 
                 if (proc === "P02") {
-                  // Überprüfen, ob Datum in der Zukunft liegt
-                  const startDate = getTaskDetail(schedule, "start"); // Startdatum extrahieren
+                  const startDate = getTaskDetail(schedule, "start"); 
                   if (startDate) {
                     const date = new Date(
                       startDate.substr(0, 4) +
@@ -39,8 +33,8 @@ function RecentActivity() {
                         startDate.substr(4, 2) +
                         "-" +
                         startDate.substr(6, 2)
-                    ); // Datum erstellen
-                    return date > new Date(); // Datum mit aktuellem Datum vergleichen
+                    ); 
+                    return date > new Date();
                   }
                 }
                 return false;
@@ -49,19 +43,19 @@ function RecentActivity() {
             return false;
           });
 
-          setUsersWithFutureExits(futureExits); // Benutzer mit zukünftigen Einträgen setzen
+          setUsersWithFutureExits(futureExits);
         } else {
           console.error(
             "Daten von fetchData sind ungültig oder resultList ist nicht vorhanden."
           );
         }
       } catch (error) {
-        console.error("Fehler beim Abrufen der Daten:", error.message); // Fehler behandeln
+        console.error("Fehler beim Abrufen der Daten:", error.message); 
       }
     };
 
-    fetchUserExits(); // Funktion zum Abrufen von Benutzereinträgen aufrufen
-  }, []); // Leeres Abhängigkeitsarray sorgt dafür, dass der Effekt nur einmal beim Mounten ausgeführt wird
+    fetchUserExits();
+  }, []);
 
   return (
     <div className="card">
