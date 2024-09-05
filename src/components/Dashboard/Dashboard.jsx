@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"; 
-import fetchData from "../fetchData"; 
+import fetchData from "../fetchdata"; 
 import Card from "./Card"; 
 import "./DashboardCSS/dashboard.css"; 
 import Reports from "./Reports"; 

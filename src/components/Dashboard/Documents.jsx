@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "./DashboardCSS/documents.css";
 import Reports from "./Reports";
-import fetchData from "../fetchData";
+import fetchData from "../fetchdata";
 
 function Documents() {
   const [data, setData] = useState(null);

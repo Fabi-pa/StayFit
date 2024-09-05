@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import fetchData, { getTaskDetail, printDate } from "../fetchData"; 
+import fetchData, { getTaskDetail, printDate } from "../fetchdata"; 
 import "./DashboardCSS/dashboard.css"; 
 
 function ReportData() {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import fetchData, { getTaskDetail, printDate } from "..";
+import fetchData, { getTaskDetail, printDate } from "../fetchdata";
 import "./DashboardCSS/recentActivity.css";
 import CardFilter from "./CardFilter";
 
