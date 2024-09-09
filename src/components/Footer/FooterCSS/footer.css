@@ -1,15 +1,22 @@
-.header {
-    transition: all 0.5s;
-    z-index: 997;
-    height: 60px;
-    box-shadow: 0px 2px 20px rgba(1,41,112,0.1);
-    background-color: #fff;
-    padding-left: 20px;
+.footer {
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    transition: all 0.3s;
+    border-top: 1px solid #cddfff;
 }
 
-.header .toggle-sidebar-btn {
-    font-size: 32px;
-    padding-left: 10px;
-    cursor: pointer;
+.footer .copyright {
+    text-align: center;
+    color: #012970;
+}
+
+.footer .credits {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
     color: #012970;
 }

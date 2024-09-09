@@ -18,5 +18,4 @@ function Footer() {
   );
 }
 
-// Exportiert die Footer-Komponente als Standardexport
 export default Footer;
